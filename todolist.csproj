@@ -277,17 +277,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VIEW\MyPlan.cs">
-      <SubType>Form</SubType>
+    <Compile Include="VIEW\UC\myplan.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="VIEW\MyPlan.Designer.cs">
-      <DependentUpon>MyPlan.cs</DependentUpon>
+    <Compile Include="VIEW\UC\myplan.Designer.cs">
+      <DependentUpon>myplan.cs</DependentUpon>
     </Compile>
-    <Compile Include="VIEW\priority.cs">
-      <SubType>Form</SubType>
+    <Compile Include="VIEW\UC\priotity.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="VIEW\priority.Designer.cs">
-      <DependentUpon>priority.cs</DependentUpon>
+    <Compile Include="VIEW\UC\priotity.Designer.cs">
+      <DependentUpon>priotity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\UC\today.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\UC\today.Designer.cs">
+      <DependentUpon>today.cs</DependentUpon>
     </Compile>
     <Compile Include="VIEW\UC\viewbyyear.cs">
       <SubType>UserControl</SubType>
@@ -308,11 +314,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="VIEW\MyPlan.resx">
-      <DependentUpon>MyPlan.cs</DependentUpon>
+    <EmbeddedResource Include="VIEW\UC\myplan.resx">
+      <DependentUpon>myplan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VIEW\priority.resx">
-      <DependentUpon>priority.cs</DependentUpon>
+    <EmbeddedResource Include="VIEW\UC\priotity.resx">
+      <DependentUpon>priotity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\UC\today.resx">
+      <DependentUpon>today.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW\UC\viewbyyear.resx">
       <DependentUpon>viewbyyear.cs</DependentUpon>
