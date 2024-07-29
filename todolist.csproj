@@ -267,11 +267,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="VIEW\Form1.cs">
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\TaskDAO.cs" />
+    <Compile Include="VIEW\Fmain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VIEW\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="VIEW\Fmain.Designer.cs">
+      <DependentUpon>Fmain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -287,26 +289,14 @@
     <Compile Include="VIEW\priority.Designer.cs">
       <DependentUpon>priority.cs</DependentUpon>
     </Compile>
-    <Compile Include="VIEW\US\myplan.cs">
+    <Compile Include="VIEW\UC\viewbyyear.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="VIEW\US\myplan.Designer.cs">
-      <DependentUpon>myplan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="VIEW\US\viewbymonth.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="VIEW\US\viewbymonth.Designer.cs">
-      <DependentUpon>viewbymonth.cs</DependentUpon>
-    </Compile>
-    <Compile Include="VIEW\US\viewbyyear.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="VIEW\US\viewbyyear.Designer.cs">
+    <Compile Include="VIEW\UC\viewbyyear.Designer.cs">
       <DependentUpon>viewbyyear.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="VIEW\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="VIEW\Fmain.resx">
+      <DependentUpon>Fmain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -324,13 +314,7 @@
     <EmbeddedResource Include="VIEW\priority.resx">
       <DependentUpon>priority.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VIEW\US\myplan.resx">
-      <DependentUpon>myplan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VIEW\US\viewbymonth.resx">
-      <DependentUpon>viewbymonth.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VIEW\US\viewbyyear.resx">
+    <EmbeddedResource Include="VIEW\UC\viewbyyear.resx">
       <DependentUpon>viewbyyear.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
