@@ -22,13 +22,13 @@ namespace todolist.DAO
 
         public DataTable listTask()
         {
-            string query = "select StartTime,Title,Description,Priority from Tasks";
+            string query = "select StartTime,Description,Priority from Tasks";
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             return dt;
         }
-        public void updateTask(DateTime StartTime, string Title, string Description,string Priority)
+        public void updateTask(DateTime StartTime, string Description,string Priority)
         {
-            string query = "update tasks set Time = '" + StartTime + "', Title = N'"+Title +"', Description = N'"+Description+ "', Priority = '" + Priority+"'";
+            string query = "update tasks set Time = '" + StartTime + "' ,Description = N'"+Description+ "', Priority = '" + Priority+"'";
             DataProvider.Instance.ExecuteNonQuery(query);
         }
 

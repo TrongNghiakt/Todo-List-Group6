@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace todolist.VIEW
+namespace todolist.VIEW.UC
 {
-    public partial class priority : Form
+    public partial class today : UserControl
     {
-        public priority()
+        public today()
         {
             InitializeComponent();
         }
+
     }
 }

@@ -50,10 +50,10 @@ namespace todolist.VIEW.US
             this.listView4.GridLines = true;
             this.listView4.HideSelection = false;
             this.listView4.LabelEdit = true;
-            this.listView4.Location = new System.Drawing.Point(86, 10);
-            this.listView4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView4.Location = new System.Drawing.Point(117, 10);
+            this.listView4.Margin = new System.Windows.Forms.Padding(2);
             this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(70, 279);
+            this.listView4.Size = new System.Drawing.Size(70, 395);
             this.listView4.TabIndex = 36;
             this.listView4.UseCompatibleStateImageBehavior = false;
             this.listView4.View = System.Windows.Forms.View.Details;
@@ -74,10 +74,10 @@ namespace todolist.VIEW.US
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.LabelEdit = true;
-            this.listView1.Location = new System.Drawing.Point(165, 10);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView1.Location = new System.Drawing.Point(224, 10);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(69, 279);
+            this.listView1.Size = new System.Drawing.Size(69, 395);
             this.listView1.TabIndex = 37;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -98,10 +98,10 @@ namespace todolist.VIEW.US
             this.listView2.GridLines = true;
             this.listView2.HideSelection = false;
             this.listView2.LabelEdit = true;
-            this.listView2.Location = new System.Drawing.Point(249, 10);
-            this.listView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView2.Location = new System.Drawing.Point(321, 10);
+            this.listView2.Margin = new System.Windows.Forms.Padding(2);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(353, 279);
+            this.listView2.Size = new System.Drawing.Size(473, 395);
             this.listView2.TabIndex = 38;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -126,10 +126,10 @@ namespace todolist.VIEW.US
             this.listView3.GridLines = true;
             this.listView3.HideSelection = false;
             this.listView3.LabelEdit = true;
-            this.listView3.Location = new System.Drawing.Point(8, 10);
-            this.listView3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView3.Location = new System.Drawing.Point(21, 10);
+            this.listView3.Margin = new System.Windows.Forms.Padding(2);
             this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(70, 279);
+            this.listView3.Size = new System.Drawing.Size(70, 395);
             this.listView3.TabIndex = 39;
             this.listView3.UseCompatibleStateImageBehavior = false;
             this.listView3.View = System.Windows.Forms.View.Details;
@@ -148,9 +148,9 @@ namespace todolist.VIEW.US
             this.Controls.Add(this.listView4);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.listView2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "viewbyyear";
-            this.Size = new System.Drawing.Size(615, 298);
+            this.Size = new System.Drawing.Size(809, 427);
             this.ResumeLayout(false);
 
         }

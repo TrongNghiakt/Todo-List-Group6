@@ -45,7 +45,12 @@ namespace todolist
             this.Close();
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        /*
 
 
         private void label3_Click(object sender, EventArgs e)
@@ -134,6 +139,7 @@ namespace todolist
             rdo3.Checked = false;
             rdo4.Checked = false;
         }
+        */
     }
 
 }
