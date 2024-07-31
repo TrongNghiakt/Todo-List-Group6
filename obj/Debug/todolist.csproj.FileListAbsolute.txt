@@ -210,3 +210,4 @@ D:\To Do List\todolist\todolist\Todo-List-Group6\obj\Debug\todolist.Fmain.resour
 D:\To Do List\todolist\todolist\Todo-List-Group6\obj\Debug\todolist.VIEW.UC.myPlan.resources
 D:\To Do List\todolist\todolist\Todo-List-Group6\obj\Debug\todolist.VIEW.UC.priority.resources
 D:\To Do List\todolist\todolist\Todo-List-Group6\obj\Debug\todolist.VIEW.UC.today.resources
+D:\To Do List\todolist\todolist\Todo-List-Group6\bin\Debug\Guna.UI2.dll

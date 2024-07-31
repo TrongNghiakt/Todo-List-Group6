@@ -15,8 +15,8 @@ namespace todolist.DAO
         public static string DatabaseName = "ToDoListDB";
         public static string Username = "";
         public static string Password = "123";
-        private string ConStr = $@"Data Source={ServerName};Initial Catalog = {DatabaseName}; Integrated Security = True; Trust Server Certificate=True";
-
+        private string ConStr = $@"Data Source={ServerName};Initial Catalog = {DatabaseName};  Integrated Security = True; Encrypt=False";
+ 
         private DataProvider() { }
 
         public static DataProvider Instance
@@ -45,7 +45,7 @@ namespace todolist.DAO
                     int i = 0;
                     foreach (string item in listPara)
                     {
-                        if (item.Contains('@'))
+                        if (item.Contains(' '))
                         {
                             if (paramenter[i] != null)
                             {
@@ -91,7 +91,7 @@ namespace todolist.DAO
                     int i = 0;
                     foreach(string item in listPara)
                     {
-                        if(item.Contains('@'))
+                        if(item.Contains(' '))
                         {
                             if (paramenter[i] != null)
                             {
@@ -128,7 +128,7 @@ namespace todolist.DAO
                     int i = 0;
                     foreach(string item in listPara)
                     {
-                        if(item.Contains('@'))
+                        if(item.Contains(' '))
                         {
                             if (paramenter[i] != null)
                             {

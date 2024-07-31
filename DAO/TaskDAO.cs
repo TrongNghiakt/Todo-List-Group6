@@ -22,16 +22,31 @@ namespace todolist.DAO
 
         public DataTable listTask()
         {
-            string query = "select StartTime,Description,Priority from Tasks";
+            string query = "select * from Tasks";
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             return dt;
         }
-        public void updateTask(DateTime StartTime, string Description,string Priority)
+        public void updateTask(string Time, string Description,string Priority)
         {
-            string query = "update tasks set Time = '" + StartTime + "' ,Description = N'"+Description+ "', Priority = '" + Priority+"'";
+            string query = "update tasks set Description = N'"+Description+ "', Priority = '" + Priority+ "' where StartTime = '"+Time+"'";
             DataProvider.Instance.ExecuteNonQuery(query);
         }
-
-
+        public int addTask(string StartTime, string Description, string Priority)
+        {
+            string query = $"insert into Tasks(starttime,description,priority) values ('{StartTime}','{Description}','{Priority}')";
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result;
+        }
+        public void deleteTask(string time)
+        {
+            string query = "delete tasks from tasks where starttime = '" + time + "'";
+            DataProvider.Instance.ExecuteNonQuery (query);
+        }
+        public bool checkedTask(string starttime)
+        {
+            string query = "select * from tasks where starttime = '"+starttime+"'";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result.Rows.Count > 0;
+        }
     }
 }

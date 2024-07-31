@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listView4 = new System.Windows.Forms.ListView();
+            this.btnLowest = new System.Windows.Forms.Button();
+            this.btnHighest = new System.Windows.Forms.Button();
+            this.lvwPriority = new System.Windows.Forms.ListView();
             this.prior = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.timepr = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.reminderpr = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpPriority = new System.Windows.Forms.DateTimePicker();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
@@ -51,49 +51,51 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
-            // button2
+            // btnLowest
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(703, 249);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 65);
-            this.button2.TabIndex = 46;
-            this.button2.Text = "Lowest priority";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnLowest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
+            this.btnLowest.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLowest.Location = new System.Drawing.Point(703, 249);
+            this.btnLowest.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLowest.Name = "btnLowest";
+            this.btnLowest.Size = new System.Drawing.Size(85, 65);
+            this.btnLowest.TabIndex = 46;
+            this.btnLowest.Text = "Lowest priority";
+            this.btnLowest.UseVisualStyleBackColor = false;
+            this.btnLowest.Click += new System.EventHandler(this.btnLowest_Click);
             // 
-            // button1
+            // btnHighest
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(703, 125);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 62);
-            this.button1.TabIndex = 45;
-            this.button1.Text = "Highest Priority";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnHighest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
+            this.btnHighest.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHighest.Location = new System.Drawing.Point(703, 125);
+            this.btnHighest.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHighest.Name = "btnHighest";
+            this.btnHighest.Size = new System.Drawing.Size(85, 62);
+            this.btnHighest.TabIndex = 45;
+            this.btnHighest.Text = "Highest Priority";
+            this.btnHighest.UseVisualStyleBackColor = false;
+            this.btnHighest.Click += new System.EventHandler(this.btnHighest_Click);
             // 
-            // listView4
+            // lvwPriority
             // 
-            this.listView4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.listView4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvwPriority.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.lvwPriority.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lvwPriority.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.prior,
             this.timepr,
             this.reminderpr});
-            this.listView4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView4.GridLines = true;
-            this.listView4.HideSelection = false;
-            this.listView4.LabelEdit = true;
-            this.listView4.Location = new System.Drawing.Point(49, 64);
-            this.listView4.Margin = new System.Windows.Forms.Padding(2);
-            this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(630, 336);
-            this.listView4.TabIndex = 44;
-            this.listView4.UseCompatibleStateImageBehavior = false;
-            this.listView4.View = System.Windows.Forms.View.Details;
+            this.lvwPriority.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvwPriority.GridLines = true;
+            this.lvwPriority.HideSelection = false;
+            this.lvwPriority.LabelEdit = true;
+            this.lvwPriority.Location = new System.Drawing.Point(49, 64);
+            this.lvwPriority.Margin = new System.Windows.Forms.Padding(2);
+            this.lvwPriority.Name = "lvwPriority";
+            this.lvwPriority.Size = new System.Drawing.Size(630, 336);
+            this.lvwPriority.TabIndex = 44;
+            this.lvwPriority.UseCompatibleStateImageBehavior = false;
+            this.lvwPriority.View = System.Windows.Forms.View.Details;
             // 
             // prior
             // 
@@ -107,20 +109,20 @@
             // 
             // reminderpr
             // 
-            this.reminderpr.Text = "Reminder";
+            this.reminderpr.Text = "Description";
             this.reminderpr.Width = 515;
             // 
-            // dateTimePicker1
+            // dtpPriority
             // 
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.HighlightText;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(690, 25);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(98, 20);
-            this.dateTimePicker1.TabIndex = 43;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.dtpPriority.CalendarMonthBackground = System.Drawing.SystemColors.HighlightText;
+            this.dtpPriority.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpPriority.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpPriority.Location = new System.Drawing.Point(690, 25);
+            this.dtpPriority.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpPriority.Name = "dtpPriority";
+            this.dtpPriority.Size = new System.Drawing.Size(98, 20);
+            this.dtpPriority.TabIndex = 43;
+            this.dtpPriority.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // pictureBox16
             // 
@@ -204,10 +206,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(242)))), ((int)(((byte)(255)))));
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.listView4);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.btnLowest);
+            this.Controls.Add(this.btnHighest);
+            this.Controls.Add(this.lvwPriority);
+            this.Controls.Add(this.dtpPriority);
             this.Controls.Add(this.pictureBox16);
             this.Controls.Add(this.pictureBox15);
             this.Controls.Add(this.pictureBox14);
@@ -230,13 +232,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListView listView4;
+        private System.Windows.Forms.Button btnLowest;
+        private System.Windows.Forms.Button btnHighest;
+        private System.Windows.Forms.ListView lvwPriority;
         private System.Windows.Forms.ColumnHeader prior;
         private System.Windows.Forms.ColumnHeader timepr;
         private System.Windows.Forms.ColumnHeader reminderpr;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpPriority;
         private System.Windows.Forms.PictureBox pictureBox16;
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.PictureBox pictureBox14;
