@@ -200,14 +200,14 @@ D:\To Do List\todolist\todolist\Todo-List-Group6\bin\Debug\System.Text.Encodings
 D:\To Do List\todolist\todolist\Todo-List-Group6\bin\Debug\System.Text.Json.xml
 D:\To Do List\todolist\todolist\Todo-List-Group6\obj\Debug\todolist.csproj.AssemblyReference.cache
 D:\To Do List\todolist\todolist\Todo-List-Group6\obj\Debug\todolist.Properties.Resources.resources
-D:\To Do List\todolist\todolist\Todo-List-Group6\obj\Debug\todolist.VIEW.US.viewbyyear.resources
 D:\To Do List\todolist\todolist\Todo-List-Group6\obj\Debug\todolist.csproj.GenerateResource.cache
 D:\To Do List\todolist\todolist\Todo-List-Group6\obj\Debug\todolist.csproj.CoreCompileInputs.cache
 D:\To Do List\todolist\todolist\Todo-List-Group6\obj\Debug\todolist.csproj.Up2Date
 D:\To Do List\todolist\todolist\Todo-List-Group6\obj\Debug\todolist.exe
 D:\To Do List\todolist\todolist\Todo-List-Group6\obj\Debug\todolist.pdb
 D:\To Do List\todolist\todolist\Todo-List-Group6\obj\Debug\todolist.Fmain.resources
-D:\To Do List\todolist\todolist\Todo-List-Group6\obj\Debug\todolist.VIEW.UC.myPlan.resources
 D:\To Do List\todolist\todolist\Todo-List-Group6\obj\Debug\todolist.VIEW.UC.priority.resources
 D:\To Do List\todolist\todolist\Todo-List-Group6\obj\Debug\todolist.VIEW.UC.today.resources
 D:\To Do List\todolist\todolist\Todo-List-Group6\bin\Debug\Guna.UI2.dll
+D:\To Do List\todolist\todolist\Todo-List-Group6\obj\Debug\todolist.VIEW.UC.finished.resources
+D:\To Do List\todolist\todolist\Todo-List-Group6\obj\Debug\todolist.VIEW.UC.reminder.resources

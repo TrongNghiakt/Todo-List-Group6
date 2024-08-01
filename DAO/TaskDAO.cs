@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Guna.UI2.WinForms.Suite;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using todolist.VIEW.UC;
 
 namespace todolist.DAO
 {
@@ -26,14 +28,14 @@ namespace todolist.DAO
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             return dt;
         }
-        public void updateTask(string Time, string Description,string Priority)
+        public void updateTask(int id,string StartTime,string EndTime, string Description,string Priority,bool IsChecked)
         {
-            string query = "update tasks set Description = N'"+Description+ "', Priority = '" + Priority+ "' where StartTime = '"+Time+"'";
+            string query = $"UPDATE Tasks SET StartTime = '{StartTime}', EndTime = '{EndTime}', Description = N'{Description}', Priority = '{Priority}', IsChecked = {(IsChecked ? 1 : 0)} WHERE Id = {id}";
             DataProvider.Instance.ExecuteNonQuery(query);
         }
-        public int addTask(string StartTime, string Description, string Priority)
+        public int addTask(string StartTime,string EndTime, string Description, string Priority, bool isChecked)
         {
-            string query = $"insert into Tasks(starttime,description,priority) values ('{StartTime}','{Description}','{Priority}')";
+            string query = $"INSERT INTO Tasks (StartTime, EndTime, Description, Priority, IsChecked) VALUES ('{StartTime}', '{EndTime}', N'{Description}', '{Priority}', {(isChecked ? 1 : 0)})";
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result;
         }
@@ -47,6 +49,12 @@ namespace todolist.DAO
             string query = "select * from tasks where starttime = '"+starttime+"'";
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
             return result.Rows.Count > 0;
+        }
+
+        public void UpdateTaskCheckedState(int taskId, bool isChecked)
+        {
+            string query = $"UPDATE Tasks SET IsChecked = {(isChecked ? 1 : 0)} WHERE Id = {taskId}";
+            DataProvider.Instance.ExecuteNonQuery(query);
         }
     }
 }

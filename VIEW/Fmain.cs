@@ -64,13 +64,15 @@ namespace todolist
         private void btnMyPlan_Click(object sender, EventArgs e)
         {
             this.menupanelaccess.Location = new Point(btnMyPlan.Location.X, btnMyPlan.Location.Y);
-            myPlan myPlan = new myPlan();
+            finished myPlan = new finished();
             AddUc(myPlan);
         }
 
         private void btnRemind_Click(object sender, EventArgs e)
         {
-
+            this.menupanelaccess.Location = new Point(btnRemind.Location.X, btnRemind.Location.Y);
+            reminder remind = new reminder();
+            AddUc(remind);
         }
     }
 

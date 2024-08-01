@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             this.lvwToday = new System.Windows.Forms.ListView();
-            this.Time = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.StartTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Description = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Priority = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.dtp1 = new System.Windows.Forms.DateTimePicker();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
@@ -48,11 +47,14 @@
             this.rdo2 = new System.Windows.Forms.RadioButton();
             this.rdo1 = new System.Windows.Forms.RadioButton();
             this.label9 = new System.Windows.Forms.Label();
-            this.dtp2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpStartTime = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.picDelete = new System.Windows.Forms.PictureBox();
+            this.lbEndTime = new System.Windows.Forms.Label();
+            this.dtpEndTime = new System.Windows.Forms.DateTimePicker();
+            this.EndTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -69,50 +71,39 @@
             this.lvwToday.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.lvwToday.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lvwToday.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Time,
+            this.StartTime,
+            this.EndTime,
             this.Description,
             this.Priority});
             this.lvwToday.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvwToday.GridLines = true;
             this.lvwToday.HideSelection = false;
             this.lvwToday.LabelEdit = true;
-            this.lvwToday.Location = new System.Drawing.Point(25, 63);
+            this.lvwToday.Location = new System.Drawing.Point(10, 63);
             this.lvwToday.Margin = new System.Windows.Forms.Padding(2);
             this.lvwToday.Name = "lvwToday";
-            this.lvwToday.Size = new System.Drawing.Size(462, 348);
+            this.lvwToday.Size = new System.Drawing.Size(518, 348);
             this.lvwToday.TabIndex = 44;
             this.lvwToday.UseCompatibleStateImageBehavior = false;
             this.lvwToday.View = System.Windows.Forms.View.Details;
             this.lvwToday.SelectedIndexChanged += new System.EventHandler(this.lvwToday_SelectedIndexChanged);
             // 
-            // Time
+            // StartTime
             // 
-            this.Time.Tag = "StartTime";
-            this.Time.Text = "Time";
-            this.Time.Width = 120;
+            this.StartTime.Tag = "StartTime";
+            this.StartTime.Text = "StartTime";
+            this.StartTime.Width = 150;
             // 
             // Description
             // 
             this.Description.Tag = "Description";
             this.Description.Text = "Description";
-            this.Description.Width = 260;
+            this.Description.Width = 250;
             // 
             // Priority
             // 
             this.Priority.Tag = "Priority";
             this.Priority.Text = "Priority";
-            this.Priority.Width = 80;
-            // 
-            // dtp1
-            // 
-            this.dtp1.CalendarMonthBackground = System.Drawing.SystemColors.HighlightText;
-            this.dtp1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp1.Location = new System.Drawing.Point(389, 19);
-            this.dtp1.Margin = new System.Windows.Forms.Padding(2);
-            this.dtp1.Name = "dtp1";
-            this.dtp1.Size = new System.Drawing.Size(98, 20);
-            this.dtp1.TabIndex = 42;
             // 
             // pictureBox16
             // 
@@ -194,6 +185,8 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.panel8.Controls.Add(this.dtpEndTime);
+            this.panel8.Controls.Add(this.lbEndTime);
             this.panel8.Controls.Add(this.label10);
             this.panel8.Controls.Add(this.btnAddUpdate);
             this.panel8.Controls.Add(this.rdo4);
@@ -201,20 +194,20 @@
             this.panel8.Controls.Add(this.rdo2);
             this.panel8.Controls.Add(this.rdo1);
             this.panel8.Controls.Add(this.label9);
-            this.panel8.Controls.Add(this.dtp2);
+            this.panel8.Controls.Add(this.dtpStartTime);
             this.panel8.Controls.Add(this.label7);
             this.panel8.Controls.Add(this.txtDescription);
-            this.panel8.Location = new System.Drawing.Point(520, 81);
+            this.panel8.Location = new System.Drawing.Point(548, 63);
             this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(275, 330);
+            this.panel8.Size = new System.Drawing.Size(266, 348);
             this.panel8.TabIndex = 46;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(15, 54);
+            this.label10.Location = new System.Drawing.Point(15, 41);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(94, 16);
             this.label10.TabIndex = 47;
@@ -223,7 +216,7 @@
             // btnAddUpdate
             // 
             this.btnAddUpdate.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddUpdate.Location = new System.Drawing.Point(180, 304);
+            this.btnAddUpdate.Location = new System.Drawing.Point(170, 322);
             this.btnAddUpdate.Name = "btnAddUpdate";
             this.btnAddUpdate.Size = new System.Drawing.Size(92, 23);
             this.btnAddUpdate.TabIndex = 3;
@@ -236,7 +229,7 @@
             this.rdo4.AutoSize = true;
             this.rdo4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rdo4.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdo4.Location = new System.Drawing.Point(219, 280);
+            this.rdo4.Location = new System.Drawing.Point(221, 298);
             this.rdo4.Margin = new System.Windows.Forms.Padding(2);
             this.rdo4.Name = "rdo4";
             this.rdo4.Size = new System.Drawing.Size(41, 19);
@@ -250,7 +243,7 @@
             this.rdo3.AutoSize = true;
             this.rdo3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rdo3.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdo3.Location = new System.Drawing.Point(180, 280);
+            this.rdo3.Location = new System.Drawing.Point(182, 298);
             this.rdo3.Margin = new System.Windows.Forms.Padding(2);
             this.rdo3.Name = "rdo3";
             this.rdo3.Size = new System.Drawing.Size(42, 19);
@@ -264,7 +257,7 @@
             this.rdo2.AutoSize = true;
             this.rdo2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rdo2.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdo2.Location = new System.Drawing.Point(143, 280);
+            this.rdo2.Location = new System.Drawing.Point(145, 298);
             this.rdo2.Margin = new System.Windows.Forms.Padding(2);
             this.rdo2.Name = "rdo2";
             this.rdo2.Size = new System.Drawing.Size(36, 19);
@@ -278,7 +271,7 @@
             this.rdo1.AutoSize = true;
             this.rdo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rdo1.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdo1.Location = new System.Drawing.Point(106, 280);
+            this.rdo1.Location = new System.Drawing.Point(108, 298);
             this.rdo1.Margin = new System.Windows.Forms.Padding(2);
             this.rdo1.Name = "rdo1";
             this.rdo1.Size = new System.Drawing.Size(30, 19);
@@ -291,22 +284,22 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(19, 277);
+            this.label9.Location = new System.Drawing.Point(21, 295);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(65, 17);
             this.label9.TabIndex = 39;
             this.label9.Text = "Priority:";
             // 
-            // dtp2
+            // dtpStartTime
             // 
-            this.dtp2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtp2.Location = new System.Drawing.Point(93, 19);
-            this.dtp2.Margin = new System.Windows.Forms.Padding(2);
-            this.dtp2.Name = "dtp2";
-            this.dtp2.Size = new System.Drawing.Size(163, 20);
-            this.dtp2.TabIndex = 36;
+            this.dtpStartTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpStartTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpStartTime.Location = new System.Drawing.Point(93, 19);
+            this.dtpStartTime.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpStartTime.Name = "dtpStartTime";
+            this.dtpStartTime.Size = new System.Drawing.Size(163, 20);
+            this.dtpStartTime.TabIndex = 36;
             // 
             // label7
             // 
@@ -324,18 +317,18 @@
             this.txtDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(242)))), ((int)(((byte)(255)))));
             this.txtDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescription.Location = new System.Drawing.Point(18, 72);
+            this.txtDescription.Location = new System.Drawing.Point(18, 59);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(242, 193);
+            this.txtDescription.Size = new System.Drawing.Size(238, 193);
             this.txtDescription.TabIndex = 1;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(517, 54);
+            this.label8.Location = new System.Drawing.Point(549, 26);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 25);
@@ -345,7 +338,7 @@
             // picDelete
             // 
             this.picDelete.Image = global::todolist.Properties.Resources.seo_social_web_network_internet_262_icon_icons_com_61518;
-            this.picDelete.Location = new System.Drawing.Point(520, 16);
+            this.picDelete.Location = new System.Drawing.Point(500, 19);
             this.picDelete.Margin = new System.Windows.Forms.Padding(2);
             this.picDelete.Name = "picDelete";
             this.picDelete.Size = new System.Drawing.Size(28, 23);
@@ -354,13 +347,39 @@
             this.picDelete.TabStop = false;
             this.picDelete.Click += new System.EventHandler(this.pictureBox24_Click);
             // 
+            // lbEndTime
+            // 
+            this.lbEndTime.AutoSize = true;
+            this.lbEndTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEndTime.Location = new System.Drawing.Point(19, 266);
+            this.lbEndTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbEndTime.Name = "lbEndTime";
+            this.lbEndTime.Size = new System.Drawing.Size(60, 17);
+            this.lbEndTime.TabIndex = 48;
+            this.lbEndTime.Text = "End at:";
+            // 
+            // dtpEndTime
+            // 
+            this.dtpEndTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpEndTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpEndTime.Location = new System.Drawing.Point(93, 266);
+            this.dtpEndTime.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpEndTime.Name = "dtpEndTime";
+            this.dtpEndTime.Size = new System.Drawing.Size(163, 20);
+            this.dtpEndTime.TabIndex = 49;
+            // 
+            // EndTime
+            // 
+            this.EndTime.Tag = "EndTime";
+            this.EndTime.Text = "EndTime";
+            this.EndTime.Width = 150;
+            // 
             // today
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(217)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.lvwToday);
-            this.Controls.Add(this.dtp1);
             this.Controls.Add(this.pictureBox16);
             this.Controls.Add(this.pictureBox15);
             this.Controls.Add(this.pictureBox14);
@@ -374,7 +393,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "today";
-            this.Size = new System.Drawing.Size(809, 427);
+            this.Size = new System.Drawing.Size(825, 427);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
@@ -393,10 +412,9 @@
         #endregion
 
         private System.Windows.Forms.ListView lvwToday;
-        private System.Windows.Forms.ColumnHeader Time;
+        private System.Windows.Forms.ColumnHeader StartTime;
         private System.Windows.Forms.ColumnHeader Description;
         private System.Windows.Forms.ColumnHeader Priority;
-        private System.Windows.Forms.DateTimePicker dtp1;
         private System.Windows.Forms.PictureBox pictureBox16;
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.PictureBox pictureBox14;
@@ -412,10 +430,13 @@
         private System.Windows.Forms.RadioButton rdo2;
         private System.Windows.Forms.RadioButton rdo1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dtp2;
+        private System.Windows.Forms.DateTimePicker dtpStartTime;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox picDelete;
+        private System.Windows.Forms.DateTimePicker dtpEndTime;
+        private System.Windows.Forms.Label lbEndTime;
+        private System.Windows.Forms.ColumnHeader EndTime;
     }
 }

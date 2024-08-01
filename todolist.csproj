@@ -274,6 +274,7 @@
   <ItemGroup>
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\TaskDAO.cs" />
+    <Compile Include="TaskStateManager.cs" />
     <Compile Include="VIEW\Fmain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,11 +283,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VIEW\UC\myPlan.cs">
+    <Compile Include="VIEW\UC\finished.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="VIEW\UC\myPlan.Designer.cs">
-      <DependentUpon>myPlan.cs</DependentUpon>
+    <Compile Include="VIEW\UC\finished.Designer.cs">
+      <DependentUpon>finished.cs</DependentUpon>
     </Compile>
     <Compile Include="VIEW\UC\priority.cs">
       <SubType>UserControl</SubType>
@@ -294,17 +295,17 @@
     <Compile Include="VIEW\UC\priority.Designer.cs">
       <DependentUpon>priority.cs</DependentUpon>
     </Compile>
+    <Compile Include="VIEW\UC\reminder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\UC\reminder.Designer.cs">
+      <DependentUpon>reminder.cs</DependentUpon>
+    </Compile>
     <Compile Include="VIEW\UC\today.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="VIEW\UC\today.Designer.cs">
       <DependentUpon>today.cs</DependentUpon>
-    </Compile>
-    <Compile Include="VIEW\UC\viewbyyear.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="VIEW\UC\viewbyyear.Designer.cs">
-      <DependentUpon>viewbyyear.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="VIEW\Fmain.resx">
       <DependentUpon>Fmain.cs</DependentUpon>
@@ -319,17 +320,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="VIEW\UC\myPlan.resx">
-      <DependentUpon>myPlan.cs</DependentUpon>
+    <EmbeddedResource Include="VIEW\UC\finished.resx">
+      <DependentUpon>finished.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW\UC\priority.resx">
       <DependentUpon>priority.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\UC\reminder.resx">
+      <DependentUpon>reminder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VIEW\UC\today.resx">
       <DependentUpon>today.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VIEW\UC\viewbyyear.resx">
-      <DependentUpon>viewbyyear.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -26,32 +26,47 @@ namespace todolist.VIEW.UC
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            string time = dtp2.Value.ToString("yyyy-MM-dd HH:mm:ss");
+            string starttime = dtpStartTime.Value.ToString("yyyy-MM-dd HH:mm:ss");
+            string endtime = dtpEndTime.Value.ToString("yyyy-MM-dd HH:mm:ss");
             string description = txtDescription.Text;
             string priority = getSelectedPriority();
+            bool isChecked = false;
 
-            DateTime date1 = dtp1.Value.Date;
-            DateTime date2 = dtp2.Value.Date;
-            if(description != "")
+            if (DateTime.Parse(starttime) > DateTime.Parse(endtime))
             {
-                 if (TaskDAO.Instance.checkedTask(time))
-                 {
-                        TaskDAO.Instance.updateTask(time, description, priority);
-                        LoadDataToListView();
-                 }
-                 else
-                 {
-                        TaskDAO.Instance.addTask(time, description, priority);
-                        LoadDataToListView();
-                 }
+                MessageBox.Show("Start time cannot be later than End time. Please select a valid time range.", "Invalid Time Range", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                 MessageBox.Show("Please enter description!");
+                if (description!= "")
+                {
+                    int id = GetTaskIdByStartTime(starttime);
+                    if (id > 0)
+                    {
+                        // Update existing task
+                        TaskDAO.Instance.updateTask(id, starttime, endtime, description, priority, isChecked);
+                    }
+                    else
+                    {
+                        // Add new task
+                        TaskDAO.Instance.addTask(starttime, endtime, description, priority, isChecked);
+                    }
+                    LoadDataToListView();
+                }
+                else
+                {
+                    MessageBox.Show("Please enter description!");
+                }
+             
             }
             ClearDetailControls();
         }
-
+        public int GetTaskIdByStartTime(string startTime)
+        {
+            string query = $"SELECT Id FROM Tasks WHERE StartTime = '{startTime}'";
+            object result = DataProvider.Instance.ExecuteScalar(query);
+            return result != null ? Convert.ToInt32(result) : -1;
+        }
 
         private string getSelectedPriority()
         {
@@ -67,7 +82,7 @@ namespace todolist.VIEW.UC
         }
         private void ClearDetailControls()
         {
-            dtp2.Value = DateTime.Now;
+            dtpStartTime.Value = DateTime.Now;
             txtDescription.Clear();
             rdo1.Checked = false;
             rdo2.Checked = false;
@@ -82,9 +97,10 @@ namespace todolist.VIEW.UC
             if (lvwToday.SelectedItems.Count > 0)
             {
                 ListViewItem selectedItem = lvwToday.SelectedItems[0];
-                dtp2.Text = selectedItem.SubItems[0].Text;
-                txtDescription.Text = selectedItem.SubItems[1].Text;
-                string priority = selectedItem.SubItems[2].Text;
+                dtpStartTime.Text = selectedItem.SubItems[0].Text;
+                dtpEndTime.Text = selectedItem.SubItems[1].Text;
+                txtDescription.Text = selectedItem.SubItems[2].Text;
+                string priority = selectedItem.SubItems[3].Text;
 
                 if(priority == "I")
                 {
@@ -110,6 +126,10 @@ namespace todolist.VIEW.UC
                     rdo4.Checked = false;
                 }
             }
+            else
+            {
+                ClearDetailControls();
+            }
 
         }
 
@@ -117,9 +137,10 @@ namespace todolist.VIEW.UC
         {
             if (lvwToday.SelectedItems.Count > 0)
             {
-                lvwToday.Items.Remove(lvwToday.SelectedItems[0]);
-
-                TaskDAO.Instance.deleteTask(dtp2.Value.ToString());
+                ListViewItem selectedItem = lvwToday.SelectedItems[0];
+                lvwToday.Items.Remove(selectedItem);
+                string startTime = selectedItem.SubItems[0].Text;
+                TaskDAO.Instance.deleteTask(startTime);
                 txtDescription.Clear();
                 rdo1.Checked = false;
                 rdo2.Checked = false;
@@ -129,13 +150,14 @@ namespace todolist.VIEW.UC
             }
             else
             {
-                MessageBox.Show("Please select an item to delete.");
+                MessageBox.Show("Out of items to delete.");
             }
         }
         private void LoadDataToListView()
         {
 
             lvwToday.Items.Clear();
+
 
             DataTable todayTasks = TaskDAO.Instance.listTask();
 
@@ -144,6 +166,7 @@ namespace todolist.VIEW.UC
                 string[] listViewRow =
                 {
                     row["StartTime"].ToString(),
+                    row["EndTime"].ToString(),
                     row["Description"].ToString(),
                     row["Priority"].ToString()
                 };

@@ -33,13 +33,15 @@ namespace todolist.VIEW.UC
             foreach (DataRow row in todayTasks.Rows)
             {
                 DateTime taskDateTime = DateTime.Parse(row["StartTime"].ToString());
+                DateTime endDateTime = DateTime.Parse(row["EndTime"].ToString());
 
-                if(taskDateTime.Date == selectedDate.Date)
+                if (taskDateTime.Date == selectedDate.Date)
                 {
                     string[] listViewRow =
                 {
                     row["Priority"].ToString(),
-                    taskDateTime.ToString("HH:mm"),
+                    taskDateTime.ToString("HH:mm:ss"),
+                    endDateTime.ToString("HH:mm:ss"),
                     row["Description"].ToString(),
                 };
                     var listViewItem = new ListViewItem(listViewRow);
